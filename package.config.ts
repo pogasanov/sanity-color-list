@@ -2,7 +2,7 @@ import {defineConfig} from '@sanity/pkg-utils'
 
 export default defineConfig({
   dist: 'lib',
-  minify: true,
+  minify: false,
   legacyExports: true,
   // Remove this block to enable strict export validation
   extract: {

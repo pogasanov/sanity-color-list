@@ -22,7 +22,7 @@ export const schema = defineType({
   name: colorTypeName,
   type: 'object',
   title: 'Color',
-  ...({ components: { input: ColorListInput } } as {}),
+  components: { input: ColorListInput },
   fields: [
     {
       name: 'title',
