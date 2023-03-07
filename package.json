@@ -26,15 +26,13 @@
     },
     "./package.json": "./package.json"
   },
+  "source": "./src/index.ts",
   "main": "./lib/index.js",
   "module": "./lib/index.esm.js",
-  "source": "./src/index.ts",
   "types": "./lib/src/index.d.ts",
   "files": [
     "src",
-    "lib",
-    "v2-incompatible.js",
-    "sanity.json"
+    "lib"
   ],
   "scripts": {
     "prebuild": "npm run clean && plugin-kit verify-package --silent && pkg-utils",
