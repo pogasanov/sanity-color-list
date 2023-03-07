@@ -5,6 +5,12 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.0](https://github.com/pogasanov/sanity-color-list/compare/v1.1.0...v1.2.0) (2023-03-07)
+
+### Features
+
+- update package name ([53f05e3](https://github.com/pogasanov/sanity-color-list/commit/53f05e32488f429b9a8c7cc454d3052b0fb0f02e))
+
 ## [1.1.0](https://github.com/pogasanov/sanity-color-list/compare/v1.0.0...v1.1.0) (2023-03-07)
 
 ### Features
