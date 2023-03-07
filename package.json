@@ -6,13 +6,13 @@
     "sanity",
     "sanity-plugin"
   ],
-  "homepage": "https://github.com/KimPaow/sanity-color-list#readme",
+  "homepage": "https://github.com/pogasanov/sanity-color-list#readme",
   "bugs": {
-    "url": "https://github.com/KimPaow/sanity-color-list/issues"
+    "url": "https://github.com/pogasanov/sanity-color-list/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/KimPaow/sanity-color-list.git"
+    "url": "git+ssh://git@github.com/pogasanov/sanity-color-list.git"
   },
   "license": "MIT",
   "author": "Kim Björkman <hello@bjorkman.kim>",
@@ -32,14 +32,19 @@
   "types": "./lib/src/index.d.ts",
   "files": [
     "src",
-    "lib"
+    "lib",
+    "v2-incompatible.js",
+    "sanity.json"
   ],
   "scripts": {
     "prebuild": "npm run clean && plugin-kit verify-package --silent && pkg-utils",
-    "build": "pkg-utils build",
+    "build": "pkg-utils build --strict",
     "clean": "rimraf lib",
+    "compile": "tsc --noEmit",
+    "format": "prettier src -w",
     "link-watch": "plugin-kit link-watch",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "prepublishOnly": "npm run build",
     "watch": "pkg-utils watch"
   },
