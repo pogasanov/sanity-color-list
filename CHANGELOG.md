@@ -5,6 +5,12 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.0](https://github.com/pogasanov/sanity-color-list/compare/v1.0.0...v1.1.0) (2023-03-07)
+
+### Features
+
+- minify package ([7ab4450](https://github.com/pogasanov/sanity-color-list/commit/7ab44508d227074617c3eadad67c0c5f82512d82))
+
 ## 1.0.0 (2023-03-07)
 
 ### Features
