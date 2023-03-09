@@ -1,12 +1,5 @@
 import React, { useCallback, useState } from 'react'
-import {
-  ObjectOptions,
-  ObjectSchemaType,
-  ObjectInputProps,
-  set,
-  unset,
-  PatchEvent,
-} from 'sanity'
+import { ObjectOptions, ObjectSchemaType, ObjectInputProps, set, unset, PatchEvent } from 'sanity'
 import { Card, Inline, Stack, Text } from '@sanity/ui'
 import { BorderRadius, Color } from './Color'
 import { useColors } from '../hooks'
