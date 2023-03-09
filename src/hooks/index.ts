@@ -4,7 +4,7 @@ import { ColorListOptions, StudioColorValue } from '../components/ColorListInput
 import { useBackground } from './useBackground'
 // import { checkEqual, getColorString, getStaticKey } from './helpers'
 
-export type ColorInfo = StudioColorValue & { tc: TinyColor; decorator: TinyColor }
+export type ColorInfo = { color: StudioColorValue; tc: TinyColor; decorator: TinyColor }
 
 export const useColors = (
   options?: ColorListOptions
@@ -53,7 +53,7 @@ export const useColors = (
         decoratorColor = bgAccentColor
       }
 
-      return [...acc, { value: color.value, title: color.title, tc, decorator: decoratorColor }]
+      return [...acc, { color, tc, decorator: decoratorColor }]
     }, [])
 
     setColors(_colors)

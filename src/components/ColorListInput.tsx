@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react'
-import { ObjectOptions, ObjectSchemaType, ObjectInputProps, set, unset, PatchEvent } from 'sanity'
+import { ObjectOptions, ObjectSchemaType, ObjectInputProps, set, unset } from 'sanity'
 import { Card, Inline, Stack, Text } from '@sanity/ui'
 import { BorderRadius, Color } from './Color'
 import { useColors } from '../hooks'
@@ -8,6 +8,7 @@ import { isEqual } from '../utils'
 export type StudioColorValue = {
   title: string
   value: string
+  [key: string]: any
 }
 
 export interface ColorListOptions extends Omit<ObjectOptions, 'columns'> {
@@ -36,10 +37,10 @@ export const ColorListInput = (props: ColorInputProps) => {
     (nextColor: StudioColorValue) => {
       if (currentColor && isEqual(currentColor, nextColor)) {
         setCurrentColor(undefined)
-        onChange(PatchEvent.from(unset()))
+        onChange(unset())
       } else {
         setCurrentColor(nextColor)
-        onChange(PatchEvent.from(set(nextColor)))
+        onChange(set(nextColor))
       }
     },
     [currentColor, onChange]
@@ -68,10 +69,10 @@ export const ColorListInput = (props: ColorInputProps) => {
           <Color
             onClick={handleColorChange}
             radius={borderRadius}
-            key={color.value}
+            key={color.color.value}
             isActive={
               currentColor
-                ? isEqual(currentColor, { value: color.value, title: color.title })
+                ? isEqual(currentColor, { value: color.color.value, title: color.color.title })
                 : false
             }
             color={color}

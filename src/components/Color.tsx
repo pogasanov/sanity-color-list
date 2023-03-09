@@ -54,10 +54,7 @@ export const ColorContainer = styled.div<ColorContainerProps>`
 `
 
 export const Color = ({ isActive, radius, color, onClick }: ColorProps) => {
-  const handleClick = useCallback(
-    () => onClick({ value: color.value, title: color.title }),
-    [color.title, color.value, onClick]
-  )
+  const handleClick = useCallback(() => onClick(color.color), [color.color, onClick])
 
   return (
     <ColorContainer
